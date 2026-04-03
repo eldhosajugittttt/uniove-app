@@ -181,32 +181,3 @@
    </script>
 </body>
 </html>
-```
-
-### Step 2: Link `index.html` to `plugin.html`
-Now you need to make it so that clicking an asset card on your main page takes the user to the new detail page.
-
-Open your `index.html` file, scroll down to the `renderAssets()` function inside the `<script>`, and change the outer `<div class="asset-card">` so it wraps around an `<a>` tag pointing to the new page.
-
-Update your `renderAssets` HTML string to look like this:
-
-```html
-assetsGrid.innerHTML += `
-    <div class="asset-card" style="position: relative;">
-        <a href="plugin.html?id=${asset.id}" style="position: absolute; inset: 0; z-index: 1;"></a>
-        
-        <div class="card-header">
-            <div class="icon-box">
-                <i data-lucide="${asset.icon}" style="color: white; width: 22px; height: 22px;"></i>
-            </div>
-        </div>
-        <div class="asset-category">${asset.category === 'source' ? 'Source' : asset.category}</div>
-        <h3 class="asset-title">${asset.title}</h3>
-        <p class="asset-desc">${asset.desc}</p>
-        <div class="card-footer" style="position: relative; z-index: 2;"> <span style="font-size: 13px; color: var(--text-muted);">v1.0.0</span>
-            <button class="btn btn-white" style="padding: 8px 16px; font-size: 13px;" onclick="triggerDownload(${asset.id}, '${asset.fileUrl}')" ${disabledStr}>
-                ${btnContent} <i data-lucide="download" style="width: 14px; height: 14px;"></i>
-            </button>
-        </div>
-    </div>
-`;
