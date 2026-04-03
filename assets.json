@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "ovewriter v1.0",
+    "desc": "React component library utilizing strict geometry.",
+    "category": "source",
+    "icon": "layout-template",
+    "fileUrl": "https://github.com/eldhosajugittttt/uniove-app/releases/edit/v1.0/groq-writing-assistant-v2.zip"
+  },
+  {
+    "id": 2,
+    "title": "Nexus Theme",
+    "desc": "A deeply contrasted, distraction-free IDE theme.",
+    "category": "extension",
+    "icon": "terminal-square",
+    "fileUrl": "PASTE_YOUR_COPIED_LINK_HERE"
+  }
+]
